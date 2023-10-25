@@ -141,7 +141,7 @@ def main():
         return inp
     
     df = input_features()
-    model = pickle.load(open('model1.pkl', 'rb'))
+    model = pickle.load(open('./model1.pkl', 'rb'))
     proba = model.predict_proba([df])[0][0]
     result = "Le client ne risque pas de partir." if proba < 0.5 else "Le client risque de partir."
 
