@@ -59,7 +59,7 @@ def main():
         '''
         st.markdown(page_bg_img, unsafe_allow_html=True)
 
-    # Utilisez la fonction set_background pour définir l'arrière-plan avec "logo.jpg"
+    
     set_background("image/bg2.jpg")
     
     st.markdown('<p class="header">Analyse de l’attrition des employés d’une entreprise</p>', unsafe_allow_html=True)
@@ -145,13 +145,13 @@ def main():
     proba = model.predict_proba([df])[0][0]
     result = "Le client ne risque pas de partir." if proba < 0.5 else "Le client risque de partir."
 
-    # Ajouter une couleur en fonction du résultat
+   
     result_color = "green" if proba < 0.5 else "red"
 
-    # Encadrer le résultat et donner une couleur
+    
     styled_result = f'<div style="border: 2px solid {result_color}; padding: 10px; border-radius: 10px;"><p style="color: {result_color}; font-size: 18px; font-weight: bold;">{result}</p></div>'
 
-    # Afficher le résultat stylisé
+    
     st.markdown(styled_result, unsafe_allow_html=True)
 
 if __name__ == "__main__":
